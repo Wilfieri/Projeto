@@ -25,7 +25,8 @@
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover; 
+  ''height: 100vh;
 }
 
 body * {
@@ -70,19 +71,18 @@ body * {
   border: 0;
   border-radius: 50%;
 
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 0;
   z-index: 1;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 .light #switch button {
   left: initial;
   right: 0;
-
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -157,4 +157,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/*media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
